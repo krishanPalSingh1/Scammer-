@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aakash Panchal is Scammer</title>
+  <style>
+    /* General Body and Background */
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: 'Arial', sans-serif;
+      background-color: royalblue; /* Royal Blue Background */
+      color: white; /* White Text */
+    }
+
+    /* Container Styles */
+    .container {
+      background: black; /* Dark Black Center */
+      padding: 30px;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      border-radius: 15px;
+      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3); /* White Glow Effect */
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Heading and Text Animation */
+    .container h1 {
+      font-size: 36px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .container p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-top: 15px;
+      animation: slideIn 2s ease-in-out;
+    }
+
+    /* Heartbeat Animation */
+    .heart {
+      font-size: 60px;
+      animation: heartbeat 1s infinite;
+    }
+
+    /* Button Styles */
+    .btn {
+      background-color: white; /* White Button */
+      color: black; /* Black Text on Button */
+      padding: 12px 30px;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 20px;
+      animation: fadeIn 2s 1.5s ease-in forwards;
+    }
+
+    .btn:hover {
+      background-color: lightgray;
+      color: black;
+    }
+
+    /* Background Floating Heart Animation */
+    .heart-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .floating-heart {
+      position: absolute;
+      font-size: 30px;
+      color: white; /* White Floating Hearts */
+      opacity: 0.6;
+      animation: floatUp 8s infinite ease-in-out;
+    }
+
+    /* Keyframes for Animations */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      0% { transform: translateY(50px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-100vh) scale(1); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating Heart Background -->
+  <div class="heart-background" id="heartBackground"></div>
+
+  <!-- Main Content Container -->
+  <div class="container">
+    <h1>Aakash Panchal is Scammer 💀</h1>
+    <div class="heart">💀</div>
+    <p>Aakash Panchal ne jo bhi kiya, uska anjaam galat hoga. Ye sachai sabko samajhni chahiye.</p>
+    <a href="#message" class="btn">Know More</a>
+  </div>
+
+  <!-- JavaScript to Generate Floating Hearts in the Background -->
+  <script>
+    function createFloatingHeart() {
+      const heartBackground = document.getElementById('heartBackground');
+      const heart = document.createElement('div');
+      heart.classList.add('floating-heart');
+      heart.innerText = '💀';
+
+      // Randomize position and animation duration for each heart
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = Math.random() * 4 + 6 + 's';
+      heartBackground.appendChild(heart);
+
+      // Remove the heart after it floats up
+      setTimeout(() => {
+        heart.remove();
+      }, 8000);
+    }
+
+    // Create a new floating heart every 500ms
+    setInterval(createFloatingHeart, 500);
+  </script>
+</body>
+</html>
